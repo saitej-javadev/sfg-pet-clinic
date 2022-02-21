@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <packaging>pom</packaging>
@@ -13,7 +14,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.6.3</version>
-        <relativePath /> <!-- lookup parent from repository -->
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <groupId>guru.springframework</groupId>
@@ -34,10 +35,11 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <configuration><goals>install</goals>
-                  <!--  <checkModificationExcludes>
-                        <checkModificationExclude>pom.xml</checkModificationExclude>
-                    </checkModificationExcludes>-->
+                <configuration>
+                    <goals>install</goals>
+                    <!--  <checkModificationExcludes>
+                          <checkModificationExclude>pom.xml</checkModificationExclude>
+                      </checkModificationExcludes>-->
                 </configuration>
             </plugin>
         </plugins>
@@ -45,7 +47,7 @@
 
     <scm>
         <developerConnection>scm:git:https://github.com/saitej-javadev/sfg-pet-clinic.git</developerConnection>
-      <tag>sfg-pet-clinic-0.0.1</tag>
-  </scm>
+        <tag>sfg-pet-clinic-0.0.1</tag>
+    </scm>
 
 </project>
