@@ -1,29 +1,29 @@
 package guru.springframwork.sfgpetclinic.services.map;
 
-import guru.springframwork.sfgpetclinic.model.Owner;
-import guru.springframwork.sfgpetclinic.services.CrudService;
+import guru.springframwork.sfgpetclinic.model.Vet;
+import guru.springframwork.sfgpetclinic.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
     @Override
-    public Set<Owner> findAll() {
+    public Set<Vet> findAll() {
         return super.findAll();
     }
 
     @Override
-    public Owner findById(Long id) {
+    public Vet findById(Long id) {
         return super.findById(id);
     }
 
     @Override
-    public Owner save(Owner object) {
+    public Vet save(Vet object) {
         return super.save(object.getId(),object);
     }
 
     @Override
-    public void delete(Owner object) {
+    public void delete(Vet object) {
         super.delete(object);
     }
 
