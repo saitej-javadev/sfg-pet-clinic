@@ -7,4 +7,21 @@
 <body>
 <h1 th:text="'List of Owners'">"List of Owners"</h1>
 </body>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Second Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="owner:${owners}">
+        <td th:text="${owner.id}"></td>
+        <td th:text="${owner.firstname}"></td>
+        <td th:text="${owner.lastname}"></td>
+    </tr>
+    </tbody>
+</table>
+
 </html>
