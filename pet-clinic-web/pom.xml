@@ -45,10 +45,6 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
-        <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>webjars-locator-core</artifactId>
-        </dependency>
         <!-- webjars -->
         <dependency>
             <groupId>org.webjars</groupId>
@@ -76,9 +72,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-
-
 
 
     <build>
