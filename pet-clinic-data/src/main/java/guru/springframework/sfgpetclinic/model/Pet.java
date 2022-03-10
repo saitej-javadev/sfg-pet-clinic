@@ -1,8 +1,11 @@
 package guru.springframework.sfgpetclinic.model;
 
+import javax.persistence.*;
 import java.time.LocalDate;
-
+@Entity
+@Table(name = "pets")
 public class Pet extends BaseEntity {
+    @Column(name = "name")
     private String name;
 
     public String getName() {
@@ -12,9 +15,13 @@ public class Pet extends BaseEntity {
     public void setName(String name) {
         this.name = name;
     }
-
+    @ManyToOne
+    @JoinColumn(name = "type_id")
     private PetType petType;
+    @JoinColumn(name = "owner_id")
+    @ManyToOne
     private Owner owner;
+    @Column(name = "birth_date")
     private LocalDate birthDate;
 
     public PetType getPetType() {
