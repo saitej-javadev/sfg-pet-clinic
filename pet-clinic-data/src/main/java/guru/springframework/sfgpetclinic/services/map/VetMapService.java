@@ -1,5 +1,6 @@
 package guru.springframework.sfgpetclinic.services.map;
 
+import guru.springframework.sfgpetclinic.model.PetType;
 import guru.springframework.sfgpetclinic.model.Speciality;
 import guru.springframework.sfgpetclinic.model.Vet;
 import guru.springframework.sfgpetclinic.services.SpecialityService;
@@ -7,7 +8,8 @@ import guru.springframework.sfgpetclinic.services.VetService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
-import java.util.Set;
+import java.util.Collection;
+
 @Service
 @Profile({"default", "map"})
 public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
@@ -18,7 +20,7 @@ public class VetMapService extends AbstractMapService<Vet, Long> implements VetS
     }
 
     @Override
-    public Set<Vet> findAll() {
+    public Collection<PetType> findAll() {
         return super.findAll();
     }
 
