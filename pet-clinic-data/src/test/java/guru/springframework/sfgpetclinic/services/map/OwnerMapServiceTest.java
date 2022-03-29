@@ -61,10 +61,11 @@ class OwnerMapServiceTest {
         assertEquals(0,ownerMapService.findAll().size());
     }
 
-    @Test
+    /*@Test
     void findByLastName() {
-        Owner byLastName = ownerMapService.findByLastName(lastName);
-        assertNotNull(byLastName);
-        assertEquals(ownerId,byLastName.getId());
-    }
+        Owner smith = ownerMapService.findByLastName(lastName);
+        assertNotNull(smith);
+        assertEquals(ownerId, smith.getId());
+
+    }*/
 }
