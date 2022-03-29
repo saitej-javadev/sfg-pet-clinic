@@ -6,6 +6,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
+import java.util.Random;
 
 
 @Component
@@ -64,14 +65,16 @@ public class DataLoader implements CommandLineRunner {
         Speciality savedDentistry = specialityService.save(dentistry);
 
         Owner owner1 = new Owner();
-        owner1.setId(2L);
+        owner1.setId(1L);
         owner1.setFirstName("Michael");
         owner1.setLastName("Weston");
         owner1.setAddress("123 Ann street");
         owner1.setCity("Mimai");
-        owner1.setTelephone("34334333");
+        Random random = new Random();
+        owner1.setTelephone(String.valueOf(random.nextInt(100000000)));
 
         Pet mikesPet = new Pet();
+        mikesPet.setId(1L);
         mikesPet.setPetType(savedDogPetType);
         mikesPet.setOwner(owner1);
         mikesPet.setBirthDate(LocalDate.now());
@@ -88,17 +91,17 @@ public class DataLoader implements CommandLineRunner {
         owner2.setId(2L);
         owner2.setFirstName("Fiona");
         owner2.setLastName("Glenee");
-        owner2.setAddress("123 Ann street");
-        owner2.setCity("Mimai");
-        owner2.setTelephone("34334333");
+        owner2.setAddress("Speilburg street");
+        owner2.setCity("Texas");
+        owner2.setTelephone(String.valueOf(random.nextInt(10000000)));
 
 
 
 
 
         Pet fionasCat = new Pet();
-        fionasCat.setId(1L);
-        fionasCat.setPetType(savedDogPetType);
+        fionasCat.setId(2L);
+        fionasCat.setPetType(savedCatPetType);
         fionasCat.setOwner(owner2);
         fionasCat.setBirthDate(LocalDate.now());
         fionasCat.setName("Just Cat");
