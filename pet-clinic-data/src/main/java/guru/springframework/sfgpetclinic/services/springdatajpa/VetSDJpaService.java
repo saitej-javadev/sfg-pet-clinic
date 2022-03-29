@@ -1,13 +1,11 @@
 package guru.springframework.sfgpetclinic.services.springdatajpa;
 
-import guru.springframework.sfgpetclinic.model.PetType;
 import guru.springframework.sfgpetclinic.model.Vet;
 import guru.springframework.sfgpetclinic.repositories.VetRepository;
 import guru.springframework.sfgpetclinic.services.VetService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 @Service
@@ -20,7 +18,7 @@ public class VetSDJpaService implements VetService {
     }
 
     @Override
-    public Collection<PetType> findAll() {
+    public Set<Vet> findAll() {
         Set<Vet> vets = new HashSet<>();
         vetRepository.findAll().forEach(vets::add);
         return vets;
