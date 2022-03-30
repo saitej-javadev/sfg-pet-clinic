@@ -33,8 +33,8 @@ public class VisitController {
         dataBinder.setDisallowedFields("id");
 
         dataBinder.registerCustomEditor(LocalDate.class, new PropertyEditorSupport() {
-            @Override
-            public void setAsText(String text) throws IllegalArgumentException{
+                @Override
+                public void setAsText(String text) throws IllegalArgumentException{
                 setValue(LocalDate.parse(text));
             }
         });
